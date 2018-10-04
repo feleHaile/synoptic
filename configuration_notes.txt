@@ -1,0 +1,71 @@
+audio 
+Hydrophone_example.mp3
+
+videos 
+msla video
+
+images 
+ARGO_BB_selection.png (Coriolis search map)
+modis_sst.png
+profilers_depth_24_hours.png
+
+data 
+  glodap: 
+    3 110MB files O2, Temp, Salinity (source AWS S3 bucket)
+    glodap_oxygen.nc
+    glodap_salinity.nc
+    glodap_temperature.nc
+  argo
+    2016_nov_thru_2017_oct
+      argo-profiles-4901187.nc
+      argo-profiles-4901531.nc
+      argo-profiles-4901559.nc
+      argo-profiles-4901768.nc
+      argo-profiles-4902314.nc
+      argo-profiles-5903601.nc
+      argo-profiles-5904283.nc
+      argo-profiles-5904458.nc
+      argo-profiles-5904459.nc
+      argo-trajectory-4901187.nc
+      argo-trajectory-4901531.nc
+      argo-trajectory-4901559.nc
+      argo-trajectory-4901768.nc
+      argo-trajectory-4901772.nc
+      argo-trajectory-4901784.nc
+      argo-trajectory-4902314.nc
+      argo-trajectory-5903601.nc
+      argo-trajectory-5904283.nc
+      argo-trajectory-5904458.nc
+      readme.txt
+    2018_jan_thru_apr
+      argo-profiles-4901768.nc
+      argo-profiles-4902314.nc
+      argo-profiles-4902388.nc
+      argo-profiles-4902402.nc
+      argo-profiles-5903601.nc
+      argo-trajectory-4901768.nc
+      argo-trajectory-4902314.nc
+      argo-trajectory-4902388.nc
+      argo-trajectory-4902402.nc
+      argo-trajectory-5903601.nc
+      readme.txt
+  ooi
+    getem (a very simple set of wget commands)
+    osb01.nc
+    osb02.nc
+    osb03.nc
+    osb04.nc
+    osb05.nc
+    osb06.nc
+    osb0.nc
+    osb1.nc
+    osb2.nc
+    osb3.nc
+    osb_eclipse.nc
+  modis:
+    g4.subsetted.MODISA_L3m_SST_2014_sst.20160101.138W_40N_122W_54N.nc
+
+For the base notebook directory ('revelle' in the present case) I used 'git config helper.credential store'
+so that I could push to github without perpetually entering a password.
+
+
