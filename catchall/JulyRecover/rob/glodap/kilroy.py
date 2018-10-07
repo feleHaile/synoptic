@@ -25,3 +25,8 @@ def ShowImageFromGitHub(un, rn, fn, sfn, filename, width, height):
             a.raw.decode_content = True
             shutil.copyfileobj(a.raw, f)
     return Image.open(outf).resize((width,height),Image.ANTIALIAS)
+
+def ShowLocal(filename, width, height):
+    import shutil
+    from PIL import Image
+    return Image.open(filename).resize((width,height),Image.ANTIALIAS)
