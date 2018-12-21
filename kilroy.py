@@ -1,26 +1,13 @@
 # no-underscore-dir: A variant of Python 'dir' that does not report underscore attributes
-def nudir(obj): return [x for x in dir(obj) if not x.startswith('__')]
+def dirobj(obj): return [x for x in dir(obj) if not x.startswith('__')]
 
 # list directory contents 'ls' with the -al switch to recover details
-def lsal(qualifier):  
+def lsal(path=''):  
     import os
     return os.popen('ls -al ' + qualifier).readlines()
 
-def Show(folder, filename, width, height):
-    import requests
-    import shutil
-    from PIL import Image
-    fullpath = 'https://raw.githubusercontent.com/robfatland/othermathclub/master/images/' + folder + '/' + filename
-    a = requests.get(fullpath, stream = True)
-    outf = '/home/robfatland/tmp.jpg'
-    if a.status_code == 200:
-        with open(outf, 'wb') as f:
-            a.raw.decode_content = True
-            shutil.copyfileobj(a.raw, f)
-    return Image.open(outf).resize((width,height),Image.ANTIALIAS)
-
-# A proper version of 'Show' with username, repo name, folder name, sub-folder name, and filename + render dimensions
-def ShowImageFromGitHub(un, rn, fn, sfn, filename, width, height):
+# This needs fixed
+def ShowGitHubImage(x y z fix me please un, rn, fn, sfn, filename, width, height):
     import requests
     import shutil
     from PIL import Image
@@ -34,10 +21,10 @@ def ShowImageFromGitHub(un, rn, fn, sfn, filename, width, height):
             shutil.copyfileobj(a.raw, f)
     return Image.open(outf).resize((width,height),Image.ANTIALIAS)
 
-def ShowLocal(filename, width, height):
+def ShowLocalImage(f, width, height):
     import shutil
     from PIL import Image
-    return Image.open(filename).resize((width,height),Image.ANTIALIAS)
+    return Image.open(f).resize((width,height),Image.ANTIALIAS)
 
 def getCASite(i):
     CASites = getCASites()
