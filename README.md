@@ -5,7 +5,7 @@ Regional Cabled Observatory (RCO) notebooks in outline form
 ## High-level summary
 
 * glodap
-  * Global Ocean Data Program, a static snapshot of the state of the ocean
+  * [Global Ocean Data Analysis Project](https://www.glodap.info/), a static snapshot of the state of the ocean oriented towards carbon
 * argo
   * Data for comparison from the ARGO drifter program
 * rco
