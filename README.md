@@ -22,7 +22,7 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
 
 
 * glodap
-  * [Global Ocean Data Analysis Project](https://www.glodap.info/), a static snapshot of the state of the ocean oriented towards carbon
+  * [Global Ocean Data Analysis Project](https://www.glodap.info/), a static snapshot of the ocean oriented towards carbon
 * argo
   * The [ARGO drifter program](http://argo.ucsd.edu/) provides *in situ* comparative data
 * rco
@@ -93,6 +93,10 @@ On the Port Cormorack Jupyter Hub we reflect these two caveats in the following 
 ## Detailed Summary
 
 * glodap
+  * Introduction
+    * Digression 1: Data resources
+    * Digression 2: Jupyter notebook directory structure
+    * Digression 3: Useful tips
 * argo
 * rco
 * visions
