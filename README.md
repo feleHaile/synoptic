@@ -15,7 +15,7 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
   * Data from the [Regional Cabled Observatory (RCO)](http://app-dev.ooica.net/)
 * visions
   * From [VISIONS](https://interactiveoceans.washington.edu/) the data from CTD casts: RCO summer support cruises
-* cmr (separate repository)
+* [cmr (separate repository)](https://github.com/pangeo-data/cmr)
   * Data from NASA remote sensing platforms including sea surface temperature and mean sea level anomaly
 * hydrophone
   * Data from the RCO that is not part of the CI/UFrame program; includes charismatic megafauna signals
