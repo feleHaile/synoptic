@@ -34,10 +34,11 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
 * hydrophone
   * Data from the RCO that is not part of the CI/UFrame program; includes charismatic megafauna signals
   
-## Detailed summary
+## Introduction to detailed summary
 
-This section provides a cell-level bullet-format description of what the above six notebooks do. They are intended to 
-run out of the box with two important caveats:
+This section is the preface to the subsequent cell-level bullet-format description of the six notebooks 
+noted above. There are intended to two important caveats that the interested scientist should -- we feel -- review
+prior to cloning and running the notebooks in the **synoptic** and **cmr** repositories.
 
 * A credentials directory is created **independent of** the repository clone directory (or 'folder'). 
 If the repository clone directory is /some/path/ending/in/**synoptic** then the credentials directory 
@@ -73,5 +74,20 @@ notebook data directory (folder). In fact on the Port Cormorack Jupyter Hub we h
                  /video
             /creds                             credentials (not inside any repository directory!)               
             /cmr                               GitHub repository: NASA Common Metadata Repository (CMR)
-                /cmr.ipynb etcetera            Tutorial notebook
+                /cmr.ipynb etcetera              CMR tutorial notebook etcetera...
             /synoptic                          GitHub repository: synoptic view of ocean data 
+                     /glodap.ipynb               GLODAP tutorial notebook
+                     /argo.ipynb                 ARGO tutorial notebook
+                     /rco.ipynb                  Regional Cabled Observatory notebook
+                     /visions.ipynb              VISIONS (RCO support cruise) notebook; primarily CTD casts
+                     /hydrophone.ipynb           broadband hydrophone notebook
+```
+
+## Detailed Summary
+
+* glodap
+* argo
+* rco
+* visions
+* [cmr (separate repository)](https://github.com/pangeo-data/cmr)
+* hydrophone
