@@ -37,7 +37,7 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
 ## Introduction to detailed summary
 
 This section is the preface to the subsequent cell-level bullet-format description of the six notebooks 
-noted above. There are intended to two important caveats that the interested scientist should -- we feel -- review
+noted above. There are two important caveats that the interested scientist should -- we feel -- review
 prior to cloning and running the notebooks in the **synoptic** and **cmr** repositories.
 
 * A credentials directory is created **independent of** the repository clone directory (or 'folder'). 
@@ -50,31 +50,33 @@ third party data providers and their server systems. Therefore please understand
 Make sure your credentials are stored outside of any GitHub respository directories. 
 
 * A data directory is created outside of the repository directory. This helps organize data in a central location
-and prevents overloading the repository (which has a data volume limitation) with data files. The notebooks
+and prevents overloading the repository (which has a volume limit) with data files. The notebooks
 described in detail below include sections for pulling data from other resources to create local in the 
-notebook data directory (folder). In fact on the Port Cormorack Jupyter Hub we have the following directory structure:
+notebook data directory (folder). 
+
+On the Port Cormorack Jupyter Hub we reflect these two caveats in the following directory structure:
 
 ```
-/home/jovyan                                   home directory
+/home/jovyan                                 home directory
             /data                              data directory
                  /argo                           ARGO drifter data
                  /audio                          audio files (mp3 format)
                  /glodap                         GLODAP data
                  /hydrophone                     hydrophone data (mseed format)
                  /images                         images created by Python code
-                 /modis
-                 /movies
-                 /msla
-                 /ooi
-                 /ooieng
-                 /pdfs
-                 /raster
+                 /modis                          imaging spectrometer data 
+                 /movies                         
+                 /msla                           mean sea level anomaly data
+                 /ooi                            ooi / RCO data
+                 /ooieng                         ooi / RCO engineering data
+                 /pdfs                           documentation and publications in pdf format
+                 /raster      
                  /tmp
-                 /trmm
+                 /trmm                           tropical rainfall measuring mission data
                  /video
             /creds                             credentials (not inside any repository directory!)               
             /cmr                               GitHub repository: NASA Common Metadata Repository (CMR)
-                /cmr.ipynb etcetera              CMR tutorial notebook etcetera...
+                /cmr.ipynb                       CMR tutorial notebook
             /synoptic                          GitHub repository: synoptic view of ocean data 
                      /glodap.ipynb               GLODAP tutorial notebook
                      /argo.ipynb                 ARGO tutorial notebook
