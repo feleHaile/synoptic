@@ -57,32 +57,37 @@ notebook data directory (folder).
 On the Port Cormorack Jupyter Hub we reflect these two caveats in the following directory structure:
 
 ```
-/home/jovyan                                 home directory
-            /data                              data directory
-                 /argo                           ARGO drifter data
-                 /audio                          audio files (mp3 format)
-                 /glodap                         GLODAP data
-                 /hydrophone                     hydrophone data (mseed format)
-                 /images                         images created by Python code
-                 /modis                          imaging spectrometer data 
+/home/jovyan                                     home directory
+            /data                                  data directory (not a repository)
+                 /argo                               ARGO drifter data
+                 /audio                              audio files (mp3 format)
+                 /glodap                             GLODAP data
+                 /hydrophone                         hydrophone data (mseed format)
+                 /images                             images created by Python code
+                 /modis                              imaging spectrometer data 
                  /movies                         
-                 /msla                           mean sea level anomaly data
-                 /ooi                            ooi / RCO data
-                 /ooieng                         ooi / RCO engineering data
-                 /pdfs                           documentation and publications in pdf format
+                 /msla                               mean sea level anomaly data
+                 /ooi                                ooi / RCO data
+                 /ooieng                             ooi / RCO engineering data
+                 /pdfs                               documentation and publications in pdf format
                  /raster      
                  /tmp
-                 /trmm                           tropical rainfall measuring mission data
+                 /trmm                               tropical rainfall measuring mission data
                  /video
-            /creds                             credentials (not inside any repository directory!)               
-            /cmr                               GitHub repository: NASA Common Metadata Repository (CMR)
-                /cmr.ipynb                       CMR tutorial notebook
-            /synoptic                          GitHub repository: synoptic view of ocean data 
-                     /glodap.ipynb               GLODAP tutorial notebook
-                     /argo.ipynb                 ARGO tutorial notebook
-                     /rco.ipynb                  Regional Cabled Observatory notebook
-                     /visions.ipynb              VISIONS (RCO support cruise) notebook; primarily CTD casts
-                     /hydrophone.ipynb           broadband hydrophone notebook
+            /creds                                 credentials (not inside any repository directory!)               
+            /cmr                                   GitHub repository: NASA Common Metadata Repository (CMR)
+                /cmr.ipynb                           CMR tutorial notebook
+            /synoptic                              GitHub repository: synoptic view of ocean data
+                     /glodap
+                            /glodap.ipynb            GLODAP tutorial notebook
+                     /argo
+                          /argo.ipynb                ARGO tutorial notebook
+                     /rco
+                         /rco.ipynb                  Regional Cabled Observatory notebook
+                     /visions
+                             /visions.ipynb          VISIONS (RCO support cruise) notebook
+                     /hydrophone
+                                /hydrophone.ipynb    broadband hydrophone notebook
 ```
 
 ## Detailed Summary
