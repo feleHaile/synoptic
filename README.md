@@ -1,4 +1,5 @@
 # synoptic
+### A collection of Python Jupyter notebooks intended as an ocean data science tutorial
 
 Regional Cabled Observatory (RCO) notebooks in outline form
 
