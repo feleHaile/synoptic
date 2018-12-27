@@ -1,7 +1,17 @@
 # synoptic
 ### A collection of Python Jupyter notebooks intended as an ocean data science tutorial
 
-Regional Cabled Observatory (RCO) notebooks in outline form
+The **robfatland** GitHub user **synoptic** repository contains ocean data science Jupyter notebeooks 
+oriented towards intercomparison of different empirical data resources: glodap, argo, NASA satellites, etcetera. 
+The central data resource is the Regional Cabled Observatory (abbreviated RCO) located in the northeast Pacific. 
+The material herein is also intended as a tutorial in both the basics of Python data charting and in the deconstruction
+of NetCDF data files into comprehensible components. 
+
+
+It is important to note that not all Python environments are equivalent. These notebooks were developed on a Jupyter Hub
+built and maintained at the University of Washington in 2018. Called 'PortCormorack' this Python environment has many
+key packages pre-installed to facilitate the task of *getting to the data*, our primary concern. To obtain access to
+the Port Cormorack Jupyter Hub please contact us using the email address *pangeo at uw dot edu*. 
 
 ## High-level summary
 
