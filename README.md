@@ -8,12 +8,15 @@ The material herein is also intended as a tutorial in both the basics of Python 
 of NetCDF data files into comprehensible components. 
 
 
-It is important to note that not all Python environments are equivalent. These notebooks were developed on a Jupyter Hub
-built and maintained at the University of Washington in 2018. Called 'PortCormorack' this Python environment has many
-key packages pre-installed to facilitate the task of *getting to the data*, our primary concern. To obtain access to
-the Port Cormorack Jupyter Hub please contact us using the email address *pangeo at uw dot edu*. 
+Noting that not all Python environments are equivalent: These notebooks were developed on a Jupyter Hub
+built and maintained by the University of Washington *Research Computing* team, circa 2018-19. This
+Jupyter Hub, named 'Port Cormorack', features a Python 3 environment with many relevant packages installed
+for ready use. This facilitates the primary objective of *getting to the data*. For more on Port Cormorack 
+please direct inquiries to *pangeo at uw dot edu*. 
+
 
 ## High-level summary
+
 
 All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/synoptic) repository unless noted.
 
@@ -32,3 +35,43 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
   * Data from the RCO that is not part of the CI/UFrame program; includes charismatic megafauna signals
   
 ## Detailed summary
+
+This section provides a cell-level bullet-format description of what the above six notebooks do. They are intended to 
+run out of the box with two important caveats:
+
+* A credentials directory is created **independent of** the repository clone directory (or 'folder'). 
+If the repository clone directory is /some/path/ending/in/**synoptic** then the credentials directory 
+is not *within* that directory. Rather it branches from the parent directory: As in /some/path/ending/in/**credentials**.
+It is beyond scope to explain in detail why this is important but briefly: If you preserve credentials
+in a location inside a GitHub respository you will expose those credentials to unauthorized use when you
+push that repository to GitHub. This can mean lost time, cost to your program, and unnecessary damage to
+third party data providers and their server systems. Therefore please understand and follow this security precaution: 
+Make sure your credentials are stored outside of any GitHub respository directories. 
+
+* A data directory is created outside of the repository directory. This helps organize data in a central location
+and prevents overloading the repository (which has a data volume limitation) with data files. The notebooks
+described in detail below include sections for pulling data from other resources to create local in the 
+notebook data directory (folder). In fact on the Port Cormorack Jupyter Hub we have the following directory structure:
+
+```
+/home/jovyan                                   home directory
+            /data                              data directory
+                 /argo                           ARGO drifter data
+                 /audio                          audio files (mp3 format)
+                 /glodap                         GLODAP data
+                 /hydrophone                     hydrophone data (mseed format)
+                 /images                         images created by Python code
+                 /modis
+                 /movies
+                 /msla
+                 /ooi
+                 /ooieng
+                 /pdfs
+                 /raster
+                 /tmp
+                 /trmm
+                 /video
+            /creds                             credentials (not inside any repository directory!)               
+            /cmr                               GitHub repository: NASA Common Metadata Repository (CMR)
+                /cmr.ipynb etcetera            Tutorial notebook
+            /synoptic                          GitHub repository: synoptic view of ocean data 
