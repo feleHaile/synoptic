@@ -1,25 +1,11 @@
-## Introduction  
-A collection of reproducible notebooks visualizing data from the Ocean Observatories Initiative.
+# Introduction  
 
-### Setup
+This folder features a collection of topic-oriented notebooks from Ocean Observatories Initiative community work. 
+This is presented here as a resource 'over and above' the core **synoptic** content: 
+{ **RCO**, **MODIS**, **ARGO**, **GLODAP**, **CMR** }. 
+The notebooks here are organized by scientific topic rather than OOI system terminology.
+Each topic folder has a main notebook showing the data visualization, along with a data folder that hosts or retrieves the data from the system. In the case of high density datasets (like BOTPT) data are downsampled and hosted inside the folder, so that the visualization runs smoothly on even a minimal cloud-hosted platform. 
 
-`conda create -n ooi python=3 ipykernel requests xarray netcdf4 pandas numpy matplotlib`
+## Topics
 
-#### TODO
-
-* Create more notebooks!
-
-* Annotate the notebooks and add scientific context.
-
-* Describe each notebook in the manuscript md. Each notebook can be a paragraph or subsection.
-
-* Add references to notebooks and manuscript, wherever applicable.
-
-* Work on the manuscript.
-
-* Setup and test all visualization notebooks on mybinder.
-
-#### Notes
-FK: Notebooks are organized by scientific concept, instead of OOI system terminology.
-
-FK: Each science topic folder has a main notebook showing the data visualization, along with a data folder that hosts or retrieves the data from the system. In the case of high density datasets (like BOTPT) data are downsamples and hosted inside the folder, so that the visualization runs smoothly on even a minimal cloud-hosted platform. 
+* Executable Ocean is a set of ideas for a manuscript
