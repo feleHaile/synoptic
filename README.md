@@ -24,7 +24,7 @@ plus a number of geophysics-oriented packages installed.
 - [This ocean data science repository](https://github.com/robfatland/synoptic)
 - [The pangeo website](http://pangeo.io)
 - [Atmospheric latent heat transport](https://github.com/lkuntz/Precip_eScience)
-- [NASA Common Metadata Repository in relation to pangeo]
+- [NASA Common Metadata Repository in relation to pangeo](http://pangeo-data/cmr)
 
 
 ### Content
