@@ -1,25 +1,33 @@
 # synoptic
-### A collection of Python Jupyter notebooks intended as an ocean data science tutorial
+## An ocean data science tutorial in Python Jupyter notebook format
+### Introduction
 
-The (GitHub User) **robfatland** repositories **synoptic** and **cmr** contain ocean data science Jupyter notebeooks.
-These were built for intercomparison of different empirical data resources: GLODAP, ARGO, NASA satellite data, etcetera. 
-The central or nexus data resource is the Regional Cabled Observatory (abbreviated RCO) located in the northeast Pacific
-off the coast of Oregon.  The material herein is intended -- also -- as a tutorial in the basics of Python data charting 
-and in the deconstruction of NetCDF data files into comprehensible components. 
-
-
-Noting that not all Python environments are equivalent: These notebooks were developed on a Jupyter Hub
-built and maintained by the University of Washington *Research Computing* team, circa 2018-19. This
-Jupyter Hub, named 'Port Cormorack', features a Python 3 environment with many relevant packages installed
-for ready use. This facilitates the primary objective of *getting to the data*. For more on Port Cormorack 
-please direct inquiries to *pangeo at uw dot edu*. 
+The **synoptic** and **cmr** repos include ocean data science Jupyter notebeooks. Material is presented both as an
+executable paper and as a learning curve for Python tools, particularly `xarray`. The links below cite other related
+work, particularly the **pangeo** project and an atmospheric latent heat analysis. 
 
 
-## High-level summary
+This repo, **synoptic**, was built for intercomparison of different observational data sources, particularly
+GLODAP, ARGO, MODIS and etcetera in relation to data from the OOI Regional Cabled Observatory. Located in the 
+northeast Pacific off the coast of Oregon this observatory provides power and retrieves data from a plethora
+of sensors continuously at high speed. 
 
 
-All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/synoptic) repository unless noted.
+Python environments are as a rule configured for work in a particular discipline.
+These notebooks were developed on the Port Cormorack Jupyter Hub built and maintained by the Research 
+Computing group at the University of Washington circa 2019. This particular environment supports Python 3 
+plus a number of geophysics-oriented packages installed. 
 
+### Links
+
+
+- [This ocean data science repository](https://github.com/robfatland/synoptic)
+- [The pangeo website](http://pangeo.io)
+- [Atmospheric latent heat transport](https://github.com/lkuntz/Precip_eScience)
+- [NASA Common Metadata Repository in relation to pangeo]
+
+
+### Content
 
 * glodap
   * [Global Ocean Data Analysis Project](https://www.glodap.info/), a static snapshot of the ocean oriented towards carbon
@@ -34,27 +42,27 @@ All notebooks are from the [robfatland/synoptic](https://github.com/robfatland/s
 * hydrophone
   * Data from the RCO that is not part of the CI/UFrame program; includes charismatic megafauna signals
   
-## Introduction to detailed summary
+### Detailed summary
 
-This section is the preface to the subsequent cell-level bullet-format description of the six notebooks 
-noted above. There are two important caveats that the interested scientist should -- we feel -- review
-prior to cloning and running the notebooks in the **synoptic** and **cmr** repositories.
+Two important points to cover with respect to this content:
 
-* A credentials directory is created **independent of** the repository clone directory (or 'folder'). 
-If the repository clone directory is /some/path/ending/in/**synoptic** then the credentials directory 
-is not *within* that directory. Rather it branches from the parent directory: As in /some/path/ending/in/**credentials**.
-It is beyond scope to explain in detail why this is important but briefly: If you preserve credentials
-in a location inside a GitHub respository you will expose those credentials to unauthorized use when you
-push that repository to GitHub. This can mean lost time, cost to your program, and unnecessary damage to
-third party data providers and their server systems. Therefore please understand and follow this security precaution: 
-Make sure your credentials are stored outside of any GitHub respository directories. 
+* A credentials directory is created **independent of** the repository clone directory (i.e. 'folder'). 
+If the repo clone is `/some/path/ending/in/synoptic` then the credentials directory 
+is not *within* that directory/folder; at the risk of costing you tens of thousands of dollars. 
+The credentials directory could safely be `/some/path/ending/in/credentials`. Why? What is the 
+risk here? Briefly: If you preserve credentials in a `git` repo and synch this with **GitHub**
+your credentials are discoverable; even if you subsequently delete them (owing to version control
+rollbacks). If for example your cloud access keys find their way onto GitHub you can find yourself
+subsidizing a phenomenal resource burn on the public cloud initiated by bots that constantly scan
+GitHub for such keys. Therefore please take the time to learn about best security practices, starting 
+by ensuring your credentials are stored ***outside*** of any GitHub respository directories. 
 
-* A data directory is created outside of the repository directory. This helps organize data in a central location
-and prevents overloading the repository (which has a volume limit) with data files. The notebooks
-described in detail below include sections for pulling data from other resources to create local in the 
-notebook data directory (folder). 
+* Here: A data directory is created outside of the repository directory. This helps organize source
+data in a single location without overloading the repository memory volume limits. The notebooks
+described below include code to pull source data from other resources (web servers) to create local 
+copies. Ultimately this copying won't be necessary but it is for the moment. 
 
-On the Port Cormorack Jupyter Hub we reflect these two caveats in the following directory structure:
+On the Port Cormorack Jupyter Hub the directory structure follows:
 
 ```
 /home/jovyan                                     home directory
@@ -75,30 +83,15 @@ On the Port Cormorack Jupyter Hub we reflect these two caveats in the following 
                  /trmm                               tropical rainfall measuring mission data
                  /video
             /creds                                 credentials (not inside any repository directory!)               
-            /cmr                                   GitHub repository: NASA Common Metadata Repository (CMR)
-                /cmr.ipynb                           CMR tutorial notebook
+            /cmr                                   GitHub pangeo-data repo: NASA Common Metadata Repository (CMR)
+                /cmr*.ipynb                          CMR tutorial notebook
+                /golive*.ipynb                       Land ice velocity
+                /modis*.ipynb                        MODIS satellite; particularly sea surface chlorophyll estimation
             /synoptic                              GitHub repository: synoptic view of ocean data
-                     /glodap
-                            /glodap.ipynb            GLODAP tutorial notebook
-                     /argo
-                          /argo.ipynb                ARGO tutorial notebook
-                     /rco
-                         /rco.ipynb                  Regional Cabled Observatory notebook
-                     /visions
-                             /visions.ipynb          VISIONS (RCO support cruise) notebook
-                     /hydrophone
-                                /hydrophone.ipynb    broadband hydrophone notebook
+                /glodap/glodap*.ipynb                GLObal Data Analysis Project: Ocean state snapshot
+                /argo/argo*.ipynb                    ARGO drifter: Water column periodic measurement
+                /rco/rco*.ipynb                      Regional Cabled Observatory
+                /visions/visions*.ipynb              VISIONS (RCO support cruise) observations (CTD casts, etcetera)
+                /hydrophone/hydrophone*.ipynb        RCO broadband hydrophone
 ```
 
-## Detailed Summary
-
-* glodap
-  * Introduction
-    * Digression 1: Data resources
-    * Digression 2: Jupyter notebook directory structure
-    * Digression 3: Useful tips
-* argo
-* rco
-* visions
-* [cmr (separate repository)](https://github.com/pangeo-data/cmr)
-* hydrophone
