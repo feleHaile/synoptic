@@ -2,6 +2,8 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/robfatland/synoptic.git/master?filepath=argo%2Fargo.ipynb)
 
+### The ARGO boilerplate README file
+
 ```
 ***
 DataSelection Export Read-me file 
@@ -47,7 +49,7 @@ The classification is used to group stations and time-series in different observ
 Vertical profiles:
 - Argo profile
 Float type platform stations  
-platform_type.platform_type = 45 and station.format_code égal PF
+platform_type.platform_type = 45 and station.format_code Ã©gal PF
 - XBT profile
 Non CTD vessel stations
 platform_type.platform_type in (30,,39) and station.format_code different from CT or OC
